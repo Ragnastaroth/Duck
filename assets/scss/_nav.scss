@@ -1,0 +1,37 @@
+nav {
+    padding: 1rem 0;
+    background-color: #f4e04d;
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+}
+
+nav ul li a {
+    color: #587792;
+    text-shadow: #587792 1px 1px 10px;
+}
+
+nav ul li a:hover {
+    color: #f2ed6f;
+    text-shadow: #8db1ab 1px 1px 10px;
+    -webkit-text-stroke: 1px black;
+}
+
+nav ul li:nth-child(4) {
+    margin-left: 15%;
+}
+
+nav a {
+    color: #587792;
+    text-shadow: #8db1ab 1px 1px 10px;
+}
+
+nav a:hover {
+    color: #f2ed6f;
+    text-shadow: #8db1ab 1px 1px 10px;
+    -webkit-text-stroke: 1px black;
+}
+

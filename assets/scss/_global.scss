@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "chewy";
+    background-color: #8db1ab;
+}
+
+button {
+    font-family: "chewy";
+    padding: 0.5rem 1rem;
+    background-color: #587792;
+    color: #F4E04D;
+    border-radius: 10px;
+    border: 2px solid #f2ed6f;
+    transition: all 0.75s ease-in-out;
+}
+
+button:hover {
+    background-color:#F4E04D;
+    color: #587792;
+    cursor: pointer;
+}
+
+.dNone {
+    display: none;
+}

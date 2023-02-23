@@ -1,0 +1,47 @@
+.article_container {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+article {
+    background-color: #cee397;
+    border-radius: 15px;
+    padding: 1rem;
+    width: 25%;
+    text-align: center;
+    img {
+        height: 325px;
+        width: 300px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+    h3 {
+        color: #587792;
+        font-size: 1.5rem;
+    }
+    h4 {
+        color: #587792;
+        font-size: 1rem;
+    }
+    p{
+        color: #587792;
+        font-size: 1rem;
+    }
+}
+
+.cat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem auto;
+    select {
+        width: 200px;
+        height: 20px;  
+    }  
+}

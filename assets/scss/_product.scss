@@ -1,0 +1,17 @@
+#comments {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    .com {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #f2ed6f;
+    border-radius: 10px;
+    margin: 1rem auto;
+    }
+}
+
