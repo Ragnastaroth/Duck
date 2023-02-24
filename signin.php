@@ -18,6 +18,7 @@ if (isset($_POST['name']) && isset($_POST['password'])) {
 
             $_SESSION['userName'] = $userData['username'];
             $_SESSION['role'] = $userData['role'];
+            $_SESSION['userId'] = $userData['id'];
             header('Location: admin.php');
             exit();
 
