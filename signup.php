@@ -26,7 +26,7 @@ if (isset($_POST['name']) && isset($_POST['password']) && isset($_POST['passconf
 
                     $request->execute(array($name, $passCrypt));
 
-                    header('Location: index.php?successsubscribe=1');
+                    header('Location: index.php');
             }
         }   
     }else{

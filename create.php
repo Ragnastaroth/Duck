@@ -23,7 +23,7 @@ if (isset($_POST['name']) && isset($_POST['category'])) {
                               VALUES(?,?,?,?)');
 
     $request->execute(array($name, $uniqueName, $category, $author));
-    header('Location: index.php?success=1');
+    header('Location: gallery.php');
     exit();
 }
 ?>

@@ -22,6 +22,7 @@ button {
     border-radius: 10px;
     border: 2px solid #f2ed6f;
     transition: all 0.75s ease-in-out;
+    margin: 0 auto;
 }
 
 button:hover {
@@ -32,4 +33,26 @@ button:hover {
 
 .dNone {
     display: none;
+}
+
+h2 {
+text-align: center;
+color:#F4E04D;
+-webkit-text-stroke: 1.5px black;
+margin: 1.5rem auto;
+font-size: 2rem;
+}
+
+.pre_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.fa-user {
+    color: #F4E04D;
+    -webkit-text-stroke: 1px black;
+    font-size: xx-large;
 }

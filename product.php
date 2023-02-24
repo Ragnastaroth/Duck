@@ -23,6 +23,16 @@ $comReq = $bdd->prepare('SELECT *
                        ');
 $comReq->execute(array($productId));
 
+$noteReq = $bdd->prepare('SELECT *, ROUND(AVG(notes.score), 1) AS avgscore, products.id AS prodId
+                          FROM products
+                          INNER JOIN notes ON products.id = notes.product_id
+                          WHERE products.id = ?
+                          GROUP BY notes.product_id
+                        ');
+$noteReq->execute(array($productId));
+
+$values = $noteReq->fetchAll();
+
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +41,7 @@ $comReq->execute(array($productId));
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/libs/css/all.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Produit</title>
 </head>
@@ -50,7 +61,12 @@ $comReq->execute(array($productId));
                 <img src="assets/images/products/<?=$duck['type_id']?>/<?=$duck['img']?>" alt="une image de <?=$duck['name']?>" class="product_link">
                 <h3><?=$duck['name']?></h3>
                 <h4>Présenté par: <?=$duck['username']?></h4>
-                <h4>Notes:</h4>
+
+                <?php foreach ($values as $value) : ?>
+                <h5 id="note">Notes: <?= $value['avgscore'] ?> /5 <i class="fa-solid fa-star"></i></h5>
+                <?php endforeach; ?>
+
+
                 <div id="comments">Commentaires:
                     <div id="com_container" class="dNone">
                         <?php while ($com = $comReq->fetch()) { ?>
